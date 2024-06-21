@@ -1,0 +1,10 @@
+Bootstrap: docker
+From: nvcr.io/nvidia/pytorch:24.05-py3
+
+%post
+    echo "Updating pip..."
+    python3 -m pip install --upgrade pip
+    echo "Installing Python packages..."
+    pip install xarray torch-harmonics tensorly tensorly-torch
+
+
